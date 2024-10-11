@@ -71,14 +71,11 @@ ii. Run Seeders -> Run the following command to seed the database with initial d
 
     php artisan db:seed
 
-## 5. **Running the Application**:
-    Run the following command to run the application:
+## 5. **Running the Application**: Run the following command to run the application
 
     php artisan serve
 
-## 6. **Configure Mail Settings**:
-
-    You need to configure the mail settings in `.env` to test the notification feature. If you're using [Mailtrap](https://mailtrap.io), set the following values:
+## 6. **Configure Mail Settings**: You can use https://mailtrap.io
 
     MAIL_MAILER=smtp
     MAIL_HOST=sandbox.smtp.mailtrap.io
@@ -93,11 +90,11 @@ ii. Run Seeders -> Run the following command to seed the database with initial d
 
 ## 7. **Schedule The Task -> Email Notification**:
 
-    Run the following command to run the task schedule:
+    i. **Run the following command to run the task schedule**:
     
     php artisan schedule:run
 
-    Run the following command to test the task schedule:
+    ii. **Run the following command to test the task schedule**:
 
     php artisan schedule:test
 

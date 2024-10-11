@@ -11,12 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('vaccine_centers', function (Blueprint $table) {
             $table->id();
             $table->string('name', 50)->nullable();
-            $table->string('nid', 10)->unique();
-            $table->string('email', 50)->unique();
-            $table->string('phone_number', 50)->unique();
+            $table->longText('address')->nullable();
+            $table->integer('daily_limit')->nullable();
             $table->timestamps();
         });
     }
@@ -26,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('vaccine_centers');
     }
 };

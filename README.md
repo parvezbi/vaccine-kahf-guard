@@ -90,11 +90,11 @@ ii. Run Seeders -> Run the following command to seed the database with initial d
 
 ## 7. **Schedule The Task -> Email Notification**:
 
-    i. **Run the following command to run the task schedule**:
+i. **Run the following command to run the task schedule**:
     
     php artisan schedule:run
 
-    ii. **Run the following command to test the task schedule**:
+ii. **Run the following command to test the task schedule**:
 
     php artisan schedule:test
 

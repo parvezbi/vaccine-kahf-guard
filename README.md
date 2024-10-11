@@ -45,7 +45,7 @@ iii. Install Dependencies -> Run the following command to install the necessary 
 
 i. Copy the `.env.example` file -> Create a new `.env` file by copying the `.env.example` file:
 
-    cp .env.example .env
+    .env.example
 
 ii. Generate an Application Key -> Run the following command to generate an application key:
 

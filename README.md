@@ -28,9 +28,7 @@ Make sure you have the following installed:
 
 ## 2. **Installation**:
 
-i. Clone the Repository
-
-    Open your terminal and clone this repository:
+i. Clone the Repository -> Open your terminal and clone this repository
 
     ```bash
     git clone https://github.com/parvezbi/vaccine-kahf-guard.git

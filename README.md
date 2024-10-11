@@ -26,7 +26,7 @@ Make sure you have the following installed:
 - Node.js
 - Laravel 10.x
 
-2. **Installation**:
+## 2. **Installation**:
 
 i. Clone the Repository
 
@@ -50,7 +50,7 @@ iii. Install Dependencies
     composer install
     ```
 
-3. **Environment Configuration**:
+## 3. **Environment Configuration**:
 
 i. Copy the `.env.example` file
 
@@ -83,7 +83,7 @@ iii. Configure the Database
 
     Make sure you have a MySQL database created with the name `vaccine_db` (or another name of your choice) and that the username and password are correct.
 
-4. **Database Setup and Seeding**:
+## 4. **Database Setup and Seeding**:
 
 i. Run Migrations
 
@@ -103,7 +103,7 @@ ii. Run Seeders
 
     This will populate your database with data such as vaccine centers and other essential entries.
 
-5. **Running the Application**:
+## 5. **Running the Application**:
 
     Run the following command to run the application:
 
@@ -111,7 +111,7 @@ ii. Run Seeders
     php artisan serve
     ```
 
-6. **Configure Mail Settings**:
+## 6. **Configure Mail Settings**:
 
     You need to configure the mail settings in `.env` to test the notification feature. If you're using [Mailtrap](https://mailtrap.io), set the following values:
 
@@ -128,7 +128,7 @@ ii. Run Seeders
 
    You can register though your mail and write the mail here in .env and setup the smtp and run the schedule commands, thats it.
 
-7. **Schedule The Task -> Email Notification**:
+## 7. **Schedule The Task -> Email Notification**:
 
     Run the following command to run the task schedule:
 
@@ -142,7 +142,7 @@ ii. Run Seeders
     php artisan schedule:test
     ```
 
-8. **Important Notes**:
+## 8. **Important Notes**:
 	if schedule is not working
 	1. Go to db table scheduled_vaccinations and take the user_id and change the email of the user from users table, set your MAIl_FROM_ADDRESS which one you used in .env
 	2. then run php artisan config:clear

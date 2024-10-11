@@ -72,7 +72,6 @@ ii. Run Seeders -> Run the following command to seed the database with initial d
     php artisan db:seed
 
 ## 5. **Running the Application**:
-
     Run the following command to run the application:
 
     php artisan serve

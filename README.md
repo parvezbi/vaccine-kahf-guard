@@ -15,7 +15,7 @@ A Laravel application for vaccine registration, scheduling, and status tracking.
 
 ---
 
-1. Requirements
+1. **Requirements**:
 
 Make sure you have the following installed:
 
@@ -26,9 +26,9 @@ Make sure you have the following installed:
 - Node.js
 - Laravel 10.x
 
-2. Installation
+2. **Installation**:
 
-i. **Clone the Repository**:
+i. Clone the Repository
 
     Open your terminal and clone this repository:
 
@@ -36,13 +36,13 @@ i. **Clone the Repository**:
     git clone https://github.com/parvezbi/vaccine-kahf-guard.git
     ```
 
-ii. **Navigate to the Project Directory**:
+ii. Navigate to the Project Directory
 
     ```bash
     cd vaccine-kahf-guard
     ```
 
-iii. **Install Dependencies**:
+iii. Install Dependencies
 
     Run the following command to install the necessary PHP dependencies:
 
@@ -50,9 +50,9 @@ iii. **Install Dependencies**:
     composer install
     ```
 
-3. Environment Configuration
+3. **Environment Configuration**:
 
-i. **Copy the `.env.example` file**:
+i. Copy the `.env.example` file
 
     Create a new `.env` file by copying the `.env.example` file:
 
@@ -60,7 +60,7 @@ i. **Copy the `.env.example` file**:
     cp .env.example .env
     ```
 
-ii. **Generate an Application Key**:
+ii. Generate an Application Key
 
     Run the following command to generate an application key:
 
@@ -68,7 +68,7 @@ ii. **Generate an Application Key**:
     php artisan key:generate
     ```
 
-iii. **Configure the Database**:
+iii. Configure the Database
 
     Open the `.env` file and configure the database connection by setting the following variables:
 
@@ -83,9 +83,9 @@ iii. **Configure the Database**:
 
     Make sure you have a MySQL database created with the name `vaccine_db` (or another name of your choice) and that the username and password are correct.
 
-4. Database Setup and Seeding
+4. **Database Setup and Seeding**:
 
-i. **Run Migrations**:
+i. Run Migrations
 
     Run the following command to migrate the database schema:
 
@@ -93,7 +93,7 @@ i. **Run Migrations**:
     php artisan migrate
     ```
 
-ii. **Run Seeders**:
+ii. Run Seeders
 
     Run the following command to seed the database with initial data:
 
@@ -103,7 +103,7 @@ ii. **Run Seeders**:
 
     This will populate your database with data such as vaccine centers and other essential entries.
 
-5. Running the Application
+5. **Running the Application**:
 
     Run the following command to run the application:
 
@@ -111,7 +111,7 @@ ii. **Run Seeders**:
     php artisan serve
     ```
 
-6. Configure Mail Settings
+6. **Configure Mail Settings**:
 
     You need to configure the mail settings in `.env` to test the notification feature. If you're using [Mailtrap](https://mailtrap.io), set the following values:
 
@@ -128,7 +128,7 @@ ii. **Run Seeders**:
 
    You can register though your mail and write the mail here in .env and setup the smtp and run the schedule commands, thats it.
 
-7. Schedule The Task -> Email Notification
+7. **Schedule The Task -> Email Notification**:
 
     Run the following command to run the task schedule:
 
@@ -142,7 +142,7 @@ ii. **Run Seeders**:
     php artisan schedule:test
     ```
 
-8. Important Notes
-	**if schedule is not working**:
+8. **Important Notes**:
+	if schedule is not working
 	1. Go to db table scheduled_vaccinations and take the user_id and change the email of the user from users table, set your MAIl_FROM_ADDRESS which one you used in .env
 	2. then run php artisan config:clear

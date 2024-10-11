@@ -13,6 +13,6 @@ class ScheduledVaccinationSeeder extends Seeder
      */
     public function run(): void
     {
-        ScheduledVaccination::factory()->count(5)->create();
+        ScheduledVaccination::factory()->count(1)->create();
     }
 }

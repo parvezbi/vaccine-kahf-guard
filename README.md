@@ -35,17 +35,11 @@ i. Clone the Repository -> Open your terminal and clone this repository
 
 ii. Navigate to the Project Directory
 
-    ```bash
     cd vaccine-kahf-guard
-    ```
 
-iii. Install Dependencies
+iii. Install Dependencies -> Run the following command to install the necessary PHP dependencies:
 
-    Run the following command to install the necessary PHP dependencies:
-
-    ```bash
     composer install
-    ```
 
 ## 3. **Environment Configuration**:
 

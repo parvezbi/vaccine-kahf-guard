@@ -15,7 +15,7 @@ A Laravel application for vaccine registration, scheduling, and status tracking.
 
 ---
 
-1. **Requirements**:
+## 1. **Requirements**:
 
 Make sure you have the following installed:
 

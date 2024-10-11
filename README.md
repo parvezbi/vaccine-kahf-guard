@@ -63,37 +63,24 @@ iii. Configure the Database -> Open the `.env` file and configure the database c
 
 ## 4. **Database Setup and Seeding**:
 
-i. Run Migrations
+i. Run Migrations -> Run the following command to migrate the database schema:
 
-    Run the following command to migrate the database schema:
-
-    ```bash
     php artisan migrate
-    ```
 
-ii. Run Seeders
+ii. Run Seeders -> Run the following command to seed the database with initial data:
 
-    Run the following command to seed the database with initial data:
-
-    ```bash
     php artisan db:seed
-    ```
-
-    This will populate your database with data such as vaccine centers and other essential entries.
 
 ## 5. **Running the Application**:
 
     Run the following command to run the application:
 
-    ```bash
     php artisan serve
-    ```
 
 ## 6. **Configure Mail Settings**:
 
     You need to configure the mail settings in `.env` to test the notification feature. If you're using [Mailtrap](https://mailtrap.io), set the following values:
 
-    ```env
     MAIL_MAILER=smtp
     MAIL_HOST=sandbox.smtp.mailtrap.io
     MAIL_PORT=2525
@@ -102,23 +89,18 @@ ii. Run Seeders
     MAIL_ENCRYPTION=tls
     MAIL_FROM_ADDRESS="yourmail"
     MAIL_FROM_NAME="${APP_NAME}"
-    ```
 
    You can register though your mail and write the mail here in .env and setup the smtp and run the schedule commands, thats it.
 
 ## 7. **Schedule The Task -> Email Notification**:
 
     Run the following command to run the task schedule:
-
-    ```bash
+    
     php artisan schedule:run
-    ```
 
     Run the following command to test the task schedule:
 
-    ```bash
     php artisan schedule:test
-    ```
 
 ## 8. **Important Notes**:
 	if schedule is not working

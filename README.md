@@ -43,36 +43,23 @@ iii. Install Dependencies -> Run the following command to install the necessary 
 
 ## 3. **Environment Configuration**:
 
-i. Copy the `.env.example` file
+i. Copy the `.env.example` file -> Create a new `.env` file by copying the `.env.example` file:
 
-    Create a new `.env` file by copying the `.env.example` file:
-
-    ```bash
     cp .env.example .env
-    ```
 
-ii. Generate an Application Key
+ii. Generate an Application Key -> Run the following command to generate an application key:
 
-    Run the following command to generate an application key:
-
-    ```bash
     php artisan key:generate
-    ```
 
-iii. Configure the Database
+iii. Configure the Database -> Open the `.env` file and configure the database connection by setting the following variables:
 
-    Open the `.env` file and configure the database connection by setting the following variables:
-
-    ```env
     DB_CONNECTION=mysql
     DB_HOST=127.0.0.1
     DB_PORT=3306
     DB_DATABASE=vaccine_db
     DB_USERNAME=your_database_username
     DB_PASSWORD=your_database_password
-    ```
-
-    Make sure you have a MySQL database created with the name `vaccine_db` (or another name of your choice) and that the username and password are correct.
+    
 
 ## 4. **Database Setup and Seeding**:
 

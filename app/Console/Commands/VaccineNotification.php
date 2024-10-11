@@ -30,11 +30,8 @@ class VaccineNotification extends Command
      */
     public function handle(VaccinationService $vaccinationService)
     {
-        $users = ScheduledVaccination::whereDate('vaccine_date', now()->addDay())->get();
-        Log::info($users);
-        Log::info('Found ' . $users->count() . ' users with vaccine scheduled for tomorrow.');
+        $users = ScheduledVaccination::whereDate('vaccine_date', Carbon::tomorrow())->get();
         foreach ($users as $user) {
-            Log::info($user->user->email);
             $subject = "Hello {$user->user->name}, your vaccine notification.";
             $body = "Dear {$user->user->name},\n\n";
             $body .= "This is a reminder that your vaccination is scheduled for tomorrow, ";
@@ -51,7 +48,6 @@ class VaccineNotification extends Command
         });
 
             $vaccinationService->saveVaccineNotification($user);
-            Log::info('Vaccine notification email sent successfully to ' . $user->user->email);
         }
 
     }

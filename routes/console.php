@@ -8,5 +8,8 @@ Artisan::command('inspire', function () {
     $this->comment(Inspiring::quote());
 })->purpose('Display an inspiring quote')->hourly();
 
-Schedule::command('app:vaccine-notification')->everyMinute();
-// Schedule::command('app:vaccine-notification')->cron('0 21 * * 0-3,6');
+// every minute for testing
+// Schedule::command('app:vaccine-notification')->everyMinute();
+
+// every sunday-friday at 9pm
+Schedule::command('app:vaccine-notification')->cron('0 21 * * 0-3,6');

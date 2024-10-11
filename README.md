@@ -4,17 +4,18 @@ A Laravel application for vaccine registration, scheduling, and status tracking.
 
 ## Table of Contents
 
-i. [Requirements](#requirements)
-ii. [Installation](#installation)
-iii. [Environment Configuration](#environment-configuration)
-iv. [Database Setup](#database-setup)
-v. [Scheduling Tasks](#scheduling-tasks)
-vi. [Running the Application](#running-the-application)
-vii. [Testing the Application](#testing-the-application)
+1. Requirements
+2. Installation
+3. Environment Configuration
+4. Database Setup and Seeding
+5. Running the Application
+6. Configure Mail Settings
+7. Schedule The Task -> Email Notification
+8. Important Notes
 
 ---
 
-i. Requirements
+1. Requirements
 
 Make sure you have the following installed:
 
@@ -25,9 +26,9 @@ Make sure you have the following installed:
 - Node.js
 - Laravel 10.x
 
-ii. Installation
+2. Installation
 
-1. **Clone the Repository**:
+i. **Clone the Repository**:
 
     Open your terminal and clone this repository:
 
@@ -35,13 +36,13 @@ ii. Installation
     git clone https://github.com/parvezbi/vaccine-kahf-guard.git
     ```
 
-2. **Navigate to the Project Directory**:
+ii. **Navigate to the Project Directory**:
 
     ```bash
     cd vaccine-kahf-guard
     ```
 
-3. **Install Dependencies**:
+iii. **Install Dependencies**:
 
     Run the following command to install the necessary PHP dependencies:
 
@@ -49,9 +50,9 @@ ii. Installation
     composer install
     ```
 
-iii. Environment Configuration
+3. Environment Configuration
 
-1. **Copy the `.env.example` file**:
+i. **Copy the `.env.example` file**:
 
     Create a new `.env` file by copying the `.env.example` file:
 
@@ -59,7 +60,7 @@ iii. Environment Configuration
     cp .env.example .env
     ```
 
-2. **Generate an Application Key**:
+ii. **Generate an Application Key**:
 
     Run the following command to generate an application key:
 
@@ -67,7 +68,7 @@ iii. Environment Configuration
     php artisan key:generate
     ```
 
-3. **Configure the Database**:
+iii. **Configure the Database**:
 
     Open the `.env` file and configure the database connection by setting the following variables:
 
@@ -82,9 +83,9 @@ iii. Environment Configuration
 
     Make sure you have a MySQL database created with the name `vaccine_db` (or another name of your choice) and that the username and password are correct.
 
-iv. Database Setup
+4. Database Setup and Seeding
 
-1. **Run Migrations**:
+i. **Run Migrations**:
 
     Run the following command to migrate the database schema:
 
@@ -92,7 +93,7 @@ iv. Database Setup
     php artisan migrate
     ```
 
-2. **Run Seeders**:
+ii. **Run Seeders**:
 
     Run the following command to seed the database with initial data:
 
@@ -102,7 +103,7 @@ iv. Database Setup
 
     This will populate your database with data such as vaccine centers and other essential entries.
 
-v. **Running the Application**:
+5. Running the Application
 
     Run the following command to run the application:
 
@@ -110,7 +111,7 @@ v. **Running the Application**:
     php artisan serve
     ```
 
-vi. **Configure Mail Settings**:
+6. Configure Mail Settings
 
     You need to configure the mail settings in `.env` to test the notification feature. If you're using [Mailtrap](https://mailtrap.io), set the following values:
 
@@ -127,7 +128,7 @@ vi. **Configure Mail Settings**:
 
    You can register though your mail and write the mail here in .env and setup the smtp and run the schedule commands, thats it.
 
-vii. **Schedule The Task -> Email Notification**:
+7. Schedule The Task -> Email Notification
 
     Run the following command to run the task schedule:
 
@@ -141,7 +142,7 @@ vii. **Schedule The Task -> Email Notification**:
     php artisan schedule:test
     ```
 
-viii. **Important Notes**:
-- if schedule is not working
+8. Important Notes
+	**if schedule is not working**:
 	1. Go to db table scheduled_vaccinations and take the user_id and change the email of the user from users table, set your MAIl_FROM_ADDRESS which one you used in .env
 	2. then run php artisan config:clear

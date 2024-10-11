@@ -106,7 +106,6 @@ v. Running the Application
 
     Run the following command to run the application:
 
-
     ```bash
     php artisan serve
     ```
@@ -115,8 +114,7 @@ vi. **Configure Mail Settings**:
 
     You need to configure the mail settings in `.env` to test the notification feature. If you're using [Mailtrap](https://mailtrap.io), set the following values:
 
-
-    ```.env
+    ```env
     MAIL_MAILER=smtp
     MAIL_HOST=sandbox.smtp.mailtrap.io
     MAIL_PORT=2525
@@ -133,20 +131,17 @@ vii. Schedule The Task -> Email Notification
 
     Run the following command to run the task schedule:
 
-
     ```bash
     php artisan schedule:run
     ```
 
-
     Run the following command to test the task schedule:
-
 
     ```bash
     php artisan schedule:test
     ```
 
 viii. Important Notes
-- if schedule is not working then check two things
-	1. set you seheduled user email in database made by seeding {your email -> used in .env for MAIL_FROM_ADDRESS}
+- if schedule is not working
+	1. Go to db table scheduled_vaccinations and take the user_id and change the email of the user from users table, set your MAIl_FROM_ADDRESS which one you used in .env
 	2. then run php artisan config:clear

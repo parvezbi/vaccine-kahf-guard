@@ -30,9 +30,8 @@ Make sure you have the following installed:
 
 i. Clone the Repository -> Open your terminal and clone this repository
 
-    ```bash
     git clone https://github.com/parvezbi/vaccine-kahf-guard.git
-    ```
+
 
 ii. Navigate to the Project Directory
 

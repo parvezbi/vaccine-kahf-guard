@@ -102,7 +102,7 @@ iv. Database Setup
 
     This will populate your database with data such as vaccine centers and other essential entries.
 
-v. Running the Application
+v. **Running the Application**:
 
     Run the following command to run the application:
 
@@ -127,7 +127,7 @@ vi. **Configure Mail Settings**:
 
    You can register though your mail and write the mail here in .env and setup the smtp and run the schedule commands, thats it.
 
-vii. Schedule The Task -> Email Notification
+vii. **Schedule The Task -> Email Notification**:
 
     Run the following command to run the task schedule:
 
@@ -141,7 +141,7 @@ vii. Schedule The Task -> Email Notification
     php artisan schedule:test
     ```
 
-viii. Important Notes
+viii. **Important Notes**:
 - if schedule is not working
 	1. Go to db table scheduled_vaccinations and take the user_id and change the email of the user from users table, set your MAIl_FROM_ADDRESS which one you used in .env
 	2. then run php artisan config:clear

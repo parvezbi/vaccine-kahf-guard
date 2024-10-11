@@ -106,6 +106,7 @@ v. Running the Application
 
     Run the following command to run the application:
 
+
     ```bash
     php artisan serve
     ```
@@ -113,6 +114,7 @@ v. Running the Application
 vi. **Configure Mail Settings**:
 
     You need to configure the mail settings in `.env` to test the notification feature. If you're using [Mailtrap](https://mailtrap.io), set the following values:
+
 
     ```.env
     MAIL_MAILER=smtp
@@ -131,11 +133,14 @@ vii. Schedule The Task -> Email Notification
 
     Run the following command to run the task schedule:
 
+
     ```bash
     php artisan schedule:run
     ```
 
+
     Run the following command to test the task schedule:
+
 
     ```bash
     php artisan schedule:test
